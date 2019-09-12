@@ -1,14 +1,11 @@
-import React, { Component } from 'react'
+import React from 'react'
+import PublicCard from 'components/PublicCard'
+import data from './data'
 
-export class About extends Component {
-
-  render() {
-    return (
-      <div>
-        关于
-      </div>
-    )
-  }
+const About = () => {
+  return (
+    <PublicCard data={data} />
+  )
 }
 
 

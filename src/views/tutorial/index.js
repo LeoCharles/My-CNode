@@ -1,16 +1,11 @@
-import React, { Component } from 'react'
+import React from 'react'
+import PublicCard from 'components/PublicCard'
+import data from './data'
 
-export class Tutorial extends Component {
-
-  render() {
-    return (
-      <div>
-        教程
-      </div>
-    )
-  }
+const Tutorial = () => {
+  return (
+    <PublicCard data={data} />
+  )
 }
-
-
 
 export default Tutorial
