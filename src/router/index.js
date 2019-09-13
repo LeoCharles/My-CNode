@@ -11,7 +11,7 @@ class RouterIndex extends Component {
     return (
       <Switch>
         <Route path="/" exact render={()=> <Redirect to="/index/all" />} />
-        <Route path="/index/:type" component={Home}/>
+        <Route path="/index/:tab" component={Home}/>
         <Route path="/tutorial" component={Tutorail}/>
         <Route path="/about" component={About}/>
         <Route path="/user" component={User}/>

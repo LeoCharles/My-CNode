@@ -4,7 +4,7 @@ import { Card, List, Avatar } from 'antd'
 
 const ReplyList = (props) => {
   const { replyList, replyCount, loading } = props
-  console.log(replyList[0]);
+
   return (
     <Card
       title={replyCount + ' 条回复'}
@@ -22,7 +22,7 @@ const ReplyList = (props) => {
               avatar={<Avatar src={item.author.avatar_url} />}
               description={<div>
                 <Link to={'/user/' + item.author.loginname }>{item.author.loginname}</Link>
-                <span style={{marginLeft: '10px'}}>发表于：{item.create_at.split('T')[0]}</span></div>}/>
+                <time style={{marginLeft: '10px'}}>发表于：{item.create_at.split('T')[0]}</time></div>}/>
             <div dangerouslySetInnerHTML={{__html: item.content}}></div>
           </List.Item>
         )}></List>

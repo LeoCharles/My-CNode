@@ -16,6 +16,7 @@ module.exports = override(
     javascriptEnabled: true,
     modifyVars: {
       '@primary-color': '#80bd01', // 主题色
+      '@gray-4': '#e8e8e8'
     }
   }),
   // 配置别名

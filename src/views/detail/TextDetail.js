@@ -13,7 +13,7 @@ const TextDetail = (props) => {
         <TextTag data={data} />
         <Avatar src={data.author.avatar_url} style={{marginRight: '10px'}}/>
         <Link to={"/user/" + data.author.loginname } style={{marginRight: '10px'}}>{data.author.loginname}</Link>
-        <span style={{color: '#999', fontWeight: 'normal'}}>发表于：{data.create_at.split('T')[0]}</span>
+        <time style={{color: '#999', fontWeight: 'normal'}}>发表于：{data.create_at.split('T')[0]}</time>
       </div>
     </div>
   )

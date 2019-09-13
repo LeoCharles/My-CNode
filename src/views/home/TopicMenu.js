@@ -4,10 +4,10 @@ import { Menu } from 'antd'
 
 export default class TopicMenu extends Component {
   render() {
-    const { mode } = this.props
+    const { mode, tab } = this.props
     return (
       <Menu
-        defaultSelectedKeys={['all']}
+        defaultSelectedKeys={[tab]}
         mode={mode}
         className="topic-menu">
         <Menu.Item key="all">
