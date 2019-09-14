@@ -9,3 +9,8 @@ export const getTopics = (params) => {
 export const getTopicDetail = (id) => {
   return request.get(`/api/v1/topic/${id}`)
 }
+
+// 获取用户详情
+export const getUser = (loginname ) => {
+  return request.get(`/api/v1/user/${loginname }`)
+}

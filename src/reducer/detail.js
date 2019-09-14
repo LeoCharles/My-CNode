@@ -17,20 +17,20 @@ const defaultState = {
 const detail = (state = defaultState, action) => {
   switch(action.type) {
     case actionTypes.UPDATE_DETAIL:
-    return {
-      ...state,
-      loading: true
-    }
-  case actionTypes.UPDATE_DETAIL_SUCCESS:
-    return {
-      data: action.data,
-      loading: false
-    }
-  case actionTypes.UPDATE_DETAIL_ERROR:
-    return {
-      data: defaultState.data,
-      loading: false
-    }
+      return {
+        ...state,
+        loading: true
+      }
+    case actionTypes.UPDATE_DETAIL_SUCCESS:
+      return {
+        data: action.data,
+        loading: false
+      }
+    case actionTypes.UPDATE_DETAIL_ERROR:
+      return {
+        data: defaultState.data,
+        loading: false
+      }
     default:
       return state
   }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Icon, Dropdown, Button, Row, Col, Divider } from 'antd'
 import { Link } from 'react-router-dom'
-import logo from '../../logo.svg'
+import logo from '@/assets/img/logo.svg'
 import Nav from './Nav'
 import './style.less'
 

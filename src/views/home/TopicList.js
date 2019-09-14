@@ -10,39 +10,54 @@ class TopicList extends Component {
     super(props)
     this.state = {
       page: 1,
-      limit: 15
+      limit: 10
     }
   }
 
-  getData(tab) {
+  getData(tab, page) {
     this.props.getTopicListDispatch({
       ...this.state,
-      tab
+      tab,
+      page
     })
   }
 
   // 挂载后请求数据
   componentDidMount() {
-    this.getData(this.props.tab)
+    this.getData(this.props.tab, this.state.page)
   }
 
   // 切换 tab 时更新数据
-  shouldComponentUpdate(nextProps) {
+  shouldComponentUpdate(nextProps, nextState) {
     if (this.props.tab !== nextProps.tab) {
-      this.getData(nextProps.tab)
+      // 切换 tab 后回到第 1 页
+      this.setState({page: 1})
+      this.getData(nextProps.tab, 1)
       return false
-    } else {
-      return true
     }
+    if (this.state.page !== nextState.page) {
+      this.getData(nextProps.tab, nextState.page)
+    }
+    return true
   }
 
   render() {
     const { data, loading } = this.props
+    const pagination = {
+      size: 'small',
+      current: this.state.page,
+      pageSize: this.state.limit,
+      total: 1000,
+      onChange: (current) => {
+        this.setState({page: current})
+      }
+    }
 
     return (
       <List
         dataSource={data}
         loading={loading}
+        pagination={pagination}
         renderItem={item => (
           <List.Item
             key={item.id}
