@@ -1,11 +1,11 @@
 import * as actionTypes from '@/constaints'
 
-const defaultList = {
+const defaulState = {
   data: [],
   loading: false
 }
 
-const list = (state = defaultList, action) => {
+const list = (state = defaulState, action) => {
   switch(action.type) {
     case actionTypes.UPDATE_LIST:
       return {

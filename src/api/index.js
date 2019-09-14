@@ -7,5 +7,5 @@ export const getTopics = (params) => {
 
 // 获取主题详情
 export const getTopicDetail = (id) => {
-  return request.get(`/api/v1/topics/${id}`)
+  return request.get(`/api/v1/topic/${id}`)
 }

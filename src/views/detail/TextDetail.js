@@ -18,7 +18,7 @@ const TextDetail = (props) => {
     </div>
   )
   return (
-    <Card title={title} loading={loading}>
+    <Card title={title} loading={loading} className="detail">
       <div dangerouslySetInnerHTML={{__html: data.content}}></div>
     </Card>
   )

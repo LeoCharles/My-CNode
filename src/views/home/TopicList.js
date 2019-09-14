@@ -27,7 +27,7 @@ class TopicList extends Component {
   }
 
   // 切换 tab 时更新数据
-  shouldComponentUpdate(nextProps, nextState) {
+  shouldComponentUpdate(nextProps) {
     if (this.props.tab !== nextProps.tab) {
       this.getData(nextProps.tab)
       return false
